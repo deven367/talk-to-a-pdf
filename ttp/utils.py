@@ -1,3 +1,5 @@
+import os
+
 import anthropic
 from PyPDF2 import PdfReader
 from rich.console import Console
@@ -7,7 +9,12 @@ from rich.prompt import Prompt
 
 # Function to send a message to the OpenAI chatbot model and return its response
 def send_message(message_log):
-    api_key = open("/home/demistry/anthropic-key.txt").read().strip()
+
+    try:
+        api_key = os.environ["ANTHROPIC_API_KEY"]
+    except KeyError:
+        raise ValueError("ANTHROPIC_API_KEY not found in environment variables")
+
     client = anthropic.Client(api_key=api_key)
 
     response = client.messages.create(
