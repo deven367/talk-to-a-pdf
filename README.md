@@ -42,3 +42,7 @@ Here is a small example, where I talk to the pdf file, `docs/tcm.pdf`,
 ![alt text](docs/cli-example.png)
 
 To quit the CLI, you can type `exit` or `quit`.
+
+## how to contribute
+
+Issues and PRs are welcome. If you have any suggestions or improvements, feel free to open an issue or a PR.
