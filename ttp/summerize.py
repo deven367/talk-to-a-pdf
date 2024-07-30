@@ -1,7 +1,7 @@
 import click
 from PyPDF2 import PdfReader
 
-from utils import chat_with
+from ttp.utils import chat_with
 
 
 def summarize_pdf(path: str, prompt:str) -> str:
