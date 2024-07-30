@@ -64,7 +64,7 @@ def chat_with(user_input:str):
             user_input = Prompt.ask("You   ")
 
             # If the user types "quit", end the loop and print a goodbye message
-            if user_input.lower() == "quit":
+            if user_input.lower() == "quit" or user_input.lower() == "exit":
                 # print("Goodbye!")
                 console.print("Goodbye!")
                 break
