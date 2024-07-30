@@ -18,9 +18,8 @@ cd talk-to-a-pdf
 pip install -e .
 ```
 
-:::Note
-The package will be uploaded on `pypi` soon.
-:::
+> [!NOTE]
+> The package will be uploaded on `pypi` soon.
 
 ### prerequisites
 
