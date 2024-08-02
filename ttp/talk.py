@@ -17,8 +17,8 @@ def chat_with_pdf(path: str, prompt:str) -> str:
 @click.command()
 @click.option("--pdf", "-p", type=click.Path(exists=True), required=True)
 @click.option("--prompt", "-pr", type=str, default="Summarize the following text")
-def main(path, prompt):
-    chat_with_pdf(path, prompt)
+def main(pdf, prompt):
+    chat_with_pdf(pdf, prompt)
 
 if __name__ == "__main__":
     main()
