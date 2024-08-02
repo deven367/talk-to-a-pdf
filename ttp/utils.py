@@ -54,8 +54,7 @@ def chat_with(user_input:str):
             message_log.append({"role": "assistant", "content": [{"type": "text", "text": response}]})
             # print(f"AI assistant: {response}")
 
-            console.print(Markdown(f"Haiku : {response}"))
-
+            console.print(Markdown(f"Haiku : {response}\n\n---"))
             # Set the flag to False so that this branch is not executed again
             first_request = False
         else:
@@ -79,7 +78,7 @@ def chat_with(user_input:str):
             # Add the chatbot's response to the conversation history and print it to the console
             message_log.append({"role": "assistant", "content": [{"type": "text", "text": response}]})
             # print(f"AI assistant: {response}")
-            console.print(Markdown(f"Haiku : {response}"))
+            console.print(Markdown(f"Haiku : {response}\n\n---"))
 
 
 def summarize_pdf_old(client: anthropic.Client, path: str, prompt:str) -> str:
