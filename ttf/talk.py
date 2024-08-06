@@ -1,7 +1,7 @@
 import click
 from PyPDF2 import PdfReader
 
-from ttp.utils import chat_with
+from ttf.utils import chat_with
 
 
 def chat_with_pdf(path: str, prompt:str) -> str:
