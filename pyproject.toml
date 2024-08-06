@@ -10,7 +10,7 @@ requires-python = ">= 3.8"
 authors = [
   {name = "Deven Mistry", email = "masterdeven@gmail.com"},
 ]
-description = "Simple CLI to talk to a file file"
+description = "Simple CLI to talk to a file"
 readme = "README.md"
 license = {file = "LICENSE"}
 keywords = ["anthropic", "pypdf", "click"]
