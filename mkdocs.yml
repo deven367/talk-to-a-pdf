@@ -1,0 +1,9 @@
+site_name: talk-to-a-file
+theme:
+  name: material
+  search: true
+  features:
+    - quick-links
+    - navigation
+    - search
+    - toc
