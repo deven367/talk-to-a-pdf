@@ -1,4 +1,4 @@
-# talk-to-a-pdf
+# talk-to-a-file
 
 This is a very simple utility script that I just created so that you could send the content of a pdf to an LLM and talk to it.
 
@@ -7,14 +7,14 @@ This is a very simple utility script that I just created so that you could send 
 To install the app, you just need to do,
 
 ```sh
-pip install git+https://github.com/deven367/talk-to-a-pdf
+pip install git+https://github.com/deven367/talk-to-a-file
 ```
 
 or
 
 ```sh
-git clone https://github.com/deven367/talk-to-a-pdf
-cd talk-to-a-pdf
+git clone https://github.com/deven367/talk-to-a-file
+cd talk-to-a-file
 pip install -e .
 ```
 
@@ -31,7 +31,7 @@ export ANTHROPIC_API_KEY=<your-api-key>
 
 ## how it works
 
-Once the package is installed, you can use the CLI command, `talk-to-a-pdf`,
+Once the package is installed, you can use the CLI command, `talk-to-a-file`,
 
 The CLI has a required argument, `pdf`, which is the path to the pdf file that you want to read.
 
