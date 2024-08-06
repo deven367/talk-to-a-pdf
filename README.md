@@ -7,19 +7,20 @@ This is a very simple utility script that I just created so that you could send 
 To install the app, you just need to do,
 
 ```sh
+pip install talk-to-a-file
+
+# or
+
 pip install git+https://github.com/deven367/talk-to-a-file
 ```
 
-or
+If you wish to develop/contribute to the project,
 
 ```sh
 git clone https://github.com/deven367/talk-to-a-file
 cd talk-to-a-file
 pip install -e .
 ```
-
-> [!NOTE]
-> The package will be uploaded on `pypi` soon.
 
 ### prerequisites
 
