@@ -25,3 +25,8 @@ build-backend = "setuptools.build_meta"
 
 [project.scripts]
 talk-to-a-pdf = "ttp.talk:main"
+
+[project.optional-dependencies]
+test = [
+  "pytest"
+]
