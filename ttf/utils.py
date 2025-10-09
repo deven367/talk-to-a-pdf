@@ -9,16 +9,17 @@ from rich.prompt import Prompt
 
 # Function to send a message to the OpenAI chatbot model and return its response
 def send_message(message_log: list) -> str:
-    """_summary_
+    """
+    Send a message to the Anthropic chatbot model and return its response.
 
     Args:
-        message_log (list): _description_
+        message_log (list): The conversation history.
 
     Raises:
-        ValueError: _description_
+        ValueError: If the ANTHROPIC_API_KEY is not found in the environment variables.
 
     Returns:
-        str: _description_
+        str: The response from the chatbot.
     """
     try:
         api_key = os.environ["ANTHROPIC_API_KEY"]
@@ -28,7 +29,8 @@ def send_message(message_log: list) -> str:
     client = anthropic.Client(api_key=api_key)
 
     response = client.messages.create(
-        model="claude-3-haiku-20240307",
+        # model="claude-3-haiku-20240307",
+        model="claude-3-5-sonnet-20241022",
         max_tokens=3800,
         system="Respond like a no non-sense assistant who answers to the point without any bullshit",
         messages=message_log,
@@ -38,10 +40,11 @@ def send_message(message_log: list) -> str:
 
 
 def chat_with(user_input:str)-> None:
-    """_summary_
+    """
+    Chat with the Anthropic chatbot model.
 
     Args:
-        user_input (str): _description_
+        user_input (str): The user's input.
     """
     # Initialize the conversation history with a message from the chatbot
     # message_log = [{"role": "system", "content": "You are a helpful assistant."}]
@@ -96,17 +99,12 @@ def chat_with(user_input:str)-> None:
             console.print(Markdown(f"Haiku : {response}\n\n---"))
 
 
-def summarize_pdf_old(client: anthropic.Client, path: str, prompt:str) -> str:
-    """_summary_
-
-    Args:
-        client (anthropic.Client): _description_
-        path (str): _description_
-        prompt (str): _description_
-
-    Returns:
-        str: _description_
+def summarize_pdf(client: anthropic.Client, path: str, prompt:str) -> str: # mark this as deprecated
     """
+    This function is deprecated and will be removed in the future.
+    It is replaced by the chat_with_file function.
+    """
+    # Use to treat the PDF like a chatbot.
     reader = PdfReader(path)
     text = "\n".join([page.extract_text() for page in reader.pages])
 
