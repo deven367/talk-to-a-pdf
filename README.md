@@ -1,4 +1,6 @@
 # talk-to-a-file
+[![Docs](https://github.com/deven367/talk-to-a-file/actions/workflows/docs.yml/badge.svg)]
+[![pytest](https://github.com/deven367/talk-to-a-file/actions/workflows/pytest.yml/badge.svg)]
 
 This is a very simple utility script that I just created so that you could send the content of a pdf to an LLM and talk to it.
 
